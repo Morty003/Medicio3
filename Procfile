@@ -1,0 +1,1 @@
+web: gunicorn Medicio.wsgi --log-file -
