@@ -1,0 +1,33 @@
+<!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+          <p>{{ about.desc }}</p>
+        </div>
+          {% for about in about_us %}
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <img src={{ about.photo.url }} class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>{{ about.small_desc }}</h3>
+
+                <p class="fst-italic">
+                 {% for service in services %} {{ service.name }}, {% endfor %}
+                </p>
+
+            <ul>
+              <li><i class="bi bi-check-circle"></i> {{ about.option_1 }} </li>
+              <li><i class="bi bi-check-circle"></i> {{ about.option_2 }}</li>
+              <li><i class="bi bi-check-circle"></i> {{ about.option_3 }}</li>
+            </ul>
+            <p>
+              {{ about.big_desc }}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section><!-- End About Us Section -->

@@ -1,0 +1,29 @@
+<!-- ======= Pricing Section ======= -->
+<section id="pricing" class="pricing">
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Pricing</h2>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+        <div class="row">
+            {% for prices in pricing %}
+                <div class="{{ prices.position }}">
+                    <div class="box" data-aos="fade-up" data-aos-delay="300">
+                        <h3>{{ prices.name }}</h3>
+                        <h4><sup>$</sup>{{ prices.price }}<span> / month</span></h4>
+                        <ul>
+                            <li {{ prices.cross_out_option_1 }}>{{ prices.option_1 }}</li>
+                            <li {{ prices.cross_out_option_2 }}>{{ prices.option_2 }}</li>
+                            <li {{ prices.cross_out_option_3 }}>{{ prices.option_3 }}</li>
+                            <li {{ prices.cross_out_option_4 }}>{{ prices.option_4 }}</li>
+                            <li {{ prices.cross_out_option_5 }}>{{ prices.option_5 }}</li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-buy">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section><!-- End Pricing Section -->

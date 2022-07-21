@@ -1,0 +1,21 @@
+{% load static %}
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container" data-aos="fade-up">
+          <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
+                  {%for item in features %}
+                  <div class="icon-box mt-5">
+                      <i class="{{ item.icon }}"></i>
+                      <h4>{{ item.name }}</h4>
+                      <p>{{ item.desc }}</p>
+                  </div>
+                  {% endfor %}
+              </div>
+              <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url({% static "assets/img/features.jpg"%});' data-aos="zoom-in"></div>
+          </div>
+
+
+
+      </div>
+    </section><!-- End Features Section -->
