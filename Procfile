@@ -1,1 +1,1 @@
-web: gunicorn Medicio.wsgi --log-file -
+web: gunicorn Medicio.wsgi
